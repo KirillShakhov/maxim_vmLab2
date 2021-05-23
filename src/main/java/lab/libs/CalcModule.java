@@ -1,4 +1,4 @@
-package lab.modules;
+package lab.libs;
 
 import java.util.ArrayList;
 

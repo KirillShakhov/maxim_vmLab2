@@ -1,5 +1,7 @@
-package lab.modules;
-import lab.interfaces.IFunc;
+package lab.libs;
+import lab.models.IFunc;
+import lab.models.Point;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;

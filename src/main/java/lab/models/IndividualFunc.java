@@ -1,7 +1,5 @@
 package lab.models;
-import lab.interfaces.ICommand;
-import lab.interfaces.IFunc;
-import lab.modules.CalcModule;
+import lab.libs.CalcModule;
 import java.util.Scanner;
 
 public class IndividualFunc implements IFunc, ICommand {

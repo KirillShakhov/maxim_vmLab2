@@ -1,7 +1,8 @@
-package lab.modules;
-import lab.interfaces.IFunc;
+package lab.methods;
+import lab.models.IFunc;
 
 public class NewtonsMethod {
+    //Функция поиска корня: методом Ньютона
     static Double solve(IFunc f, IFunc df, IFunc g, double x, double eps) {
         for(double iter = 1; eps < Math.abs(f.solve(x)); iter++) {
             if(df.solve(x) == 0)//Чёртовский важный момент(!)
