@@ -85,7 +85,7 @@ public class Bootstrap {
         if (dfunc1 != null) {
             while (true) {
                 try {
-                    System.out.println("Методом простой итерации:");
+                    System.out.println("Методом Ньютона:");
                     System.out.println("Введите начальный x для метода простой итерации");
                     x0 = Double.parseDouble(scanner.nextLine());
                     if (a > b) {
