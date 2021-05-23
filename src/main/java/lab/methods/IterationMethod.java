@@ -12,10 +12,15 @@ public class IterationMethod {
     }
     public static Result solve(IFunc f, double x, double eps){
         Result result = new Result();
-        result.addHeader("№", "xk", "f(xk)", "xk-1", "F(xk)", "|xk - xk+1|");
-        for(double iter = 1; eps < Math.abs(f.solve(x)); iter++) {
-            result.addCol(String.valueOf(x), String.valueOf(f.solve(x)), String.valueOf(g(f, x)), "       ", String.valueOf(Math.abs(x-g(f, x))));
+        result.addHeader("№", "xk", "f(xk)", "xk+1", "F(xk)", "|xk - xk+1|");
+        int iter = 1;
+        while(eps < Math.abs(f.solve(x))) {
+            result.addCol(String.valueOf(x), String.valueOf(f.solve(x)), String.valueOf(g(f, x)), String.valueOf(g(f, x)), String.valueOf(Math.abs(x-g(f, x))));
             x = g(f, x);
+            iter++;
+            if(iter > 100){
+                break;
+            }
         }
         Point p = new Point(x, f.solve(x));
         System.out.println(x + " | " + f.solve(x));
