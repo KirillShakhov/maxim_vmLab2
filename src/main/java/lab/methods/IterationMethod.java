@@ -7,7 +7,7 @@ public class IterationMethod {
     //Функция поиска корня: методом простой итерации
     private static double g(IFunc f, double x) {
         // b - произвольное число, исходя из метода простой итерации.
-        double b = 0.5;
+        double b = 0.1;
         return x + b*f.solve(x);
     }
     public static Result solve(IFunc f, double x, double eps){
