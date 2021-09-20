@@ -75,11 +75,17 @@ public class Bootstrap {
         arrayListFuncs.add(func1);
         map_func.put("Функция", arrayListFuncs);
         // Решение с помощью метода половинного деления
-        Result result1 = BinaryMethod.solve(func1, a, b, eps);
-        result1.printTable();
-        ArrayList<Point> p1 = new ArrayList<>();
-        p1.add(result1.getPoint());
-        point_func.put("Решение методом половинного деления", p1);
+        if(BinaryMethod.check(func1, a, b)) {
+            Result result1 = BinaryMethod.solve(func1, a, b, eps);
+            result1.printTable();
+            ArrayList<Point> p1 = new ArrayList<>();
+            p1.add(result1.getPoint());
+            point_func.put("Решение методом половинного деления", p1);
+        }
+        else{
+            System.out.println("Решения нет");
+            System.exit(0);
+        }
         // ввод для метода Ньютона
         double x0;
         if (dfunc1 != null) {

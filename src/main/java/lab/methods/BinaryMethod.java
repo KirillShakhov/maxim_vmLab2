@@ -24,4 +24,12 @@ public class BinaryMethod {
         result.setPoint(p);
         return result;
     }
+    public static boolean check(IFunc f, double a, double b) {
+        boolean sign = (f.solve(a)>0);
+        for(double i = a; i < b; i+= (b-a)/100) {
+            boolean chk = f.solve(i)>0;
+            if(sign != chk) return true;
+        }
+        return false;
+    }
 }
