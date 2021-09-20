@@ -6,16 +6,11 @@ import lab.models.Result;
 public class BinaryMethod {
     //Функция поиска корня: методом половинного деления
     public static Result solve(IFunc f, double a, double b, double eps){
-        if(a > b){
-            double t = a;
-            a = b;
-            b = t;
-        }
         Result result = new Result();
         result.addHeader("№", "a", "b", "x", "f(a)", "f(b)", "f(x)", "|a-b|");
         double x = 0;
         int iter = 1;
-        while(Math.abs((b-a)/2)>eps){
+        while(Math.abs((Math.abs(b)-Math.abs(a))/2)>eps){
             x = (a+b)/2;
             if((f.solve(a)*f.solve(x))>0) a=x;
             else b=x;

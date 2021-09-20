@@ -61,7 +61,7 @@ public class Bootstrap {
                 if (a > b) {
                     double t = a;
                     a = b;
-                    b = a;
+                    b = t;
                 }
                 System.out.println("Введите eps");
                 eps = Double.parseDouble(scanner.nextLine());
