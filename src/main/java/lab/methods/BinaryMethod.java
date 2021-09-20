@@ -10,7 +10,7 @@ public class BinaryMethod {
         result.addHeader("№", "a", "b", "x", "f(a)", "f(b)", "f(x)", "|a-b|");
         double x = 0;
         int iter = 1;
-        while((b-a)/2>eps){
+        while(Math.abs((b-a)/2)>eps){
             x = (a+b)/2;
             if((f.solve(a)*f.solve(x))>0) a=x;
             else b=x;
