@@ -6,6 +6,11 @@ import lab.models.Result;
 public class BinaryMethod {
     //Функция поиска корня: методом половинного деления
     public static Result solve(IFunc f, double a, double b, double eps){
+        if(a > b){
+            double t = a;
+            a = b;
+            b = t;
+        }
         Result result = new Result();
         result.addHeader("№", "a", "b", "x", "f(a)", "f(b)", "f(x)", "|a-b|");
         double x = 0;
