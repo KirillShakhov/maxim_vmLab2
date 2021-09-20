@@ -75,7 +75,7 @@ public class Bootstrap {
         arrayListFuncs.add(func1);
         map_func.put("Функция", arrayListFuncs);
         // Решение с помощью метода половинного деления
-        if(BinaryMethod.check(func1, a, b)) {
+        if(BinaryMethod.check(func1, a, b, eps)) {
             Result result1 = BinaryMethod.solve(func1, a, b, eps);
             result1.printTable();
             ArrayList<Point> p1 = new ArrayList<>();
@@ -97,7 +97,7 @@ public class Bootstrap {
                     if (a > b) {
                         double t = a;
                         a = b;
-                        b = a;
+                        b = t;
                     }
                     System.out.println("Введите eps");
                     eps = Double.parseDouble(scanner.nextLine());
@@ -123,7 +123,7 @@ public class Bootstrap {
                 if (a > b) {
                     double t = a;
                     a = b;
-                    b = a;
+                    b = t;
                 }
                 System.out.println("Введите eps");
                 eps = Double.parseDouble(scanner.nextLine());
