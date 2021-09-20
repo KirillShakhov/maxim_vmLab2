@@ -26,7 +26,7 @@ public class BinaryMethod {
     }
     public static boolean check(IFunc f, double a, double b, double eps) {
         boolean sign = (f.solve(a)>0);
-        for(double i = a; i < b; i+= (b-a)/eps) {
+        for(double i = a; i < b; i+= eps) {
             boolean chk = f.solve(i)>0;
             if(sign != chk) return true;
         }
