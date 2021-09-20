@@ -271,7 +271,7 @@ public class GraphModule extends JPanel {
         ArrayList<Color> colors = new ArrayList<>();
         colors.add(Color.green);
         colors.add(Color.blue);
-        colors.add(Color.black);
+        colors.add(Color.orange);
         colors.add(Color.magenta);
         colors.add(Color.YELLOW);
         if(i>0){
