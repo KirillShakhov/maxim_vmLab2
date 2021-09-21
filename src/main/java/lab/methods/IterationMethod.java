@@ -11,7 +11,7 @@ public class IterationMethod {
         return x + b*f.solve(x);
     }
     public static Result solve(IFunc f, double x, double eps){
-        Result result = new Result();
+        Result result = new Result(1);
         result.addHeader("№", "xk", "f(xk)", "xk+1", "F(xk)", "|xk - xk+1|");
         int iter = 1;
         while(eps < Math.abs(f.solve(x))) {

@@ -3,7 +3,12 @@ package lab.models;
 public class Result {
     private Point point;
     private StringBuilder table = new StringBuilder();
-    private int i = 1;
+    private int i;
+
+    public Result(int i) {
+        this.i = i;
+    }
+
     public void addCol(String ... v){
         table.append(i++);
         for(String i : v){

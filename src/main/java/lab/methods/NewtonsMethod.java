@@ -6,7 +6,7 @@ import lab.models.Result;
 public class NewtonsMethod {
     //Функция поиска корня: методом Ньютона
     public static Result solve(IFunc f, IFunc df, double x, double eps) {
-        Result result = new Result();
+        Result result = new Result(1);
         result.addHeader("№", "xk", "f(xk)", "f'(xk)", "xk+1", "|xk - xk+1|");
         double dx;
         int i = 1;
